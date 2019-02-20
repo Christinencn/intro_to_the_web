@@ -1,4 +1,5 @@
 require 'sinatra'
+set :session_secret, 'super secret' # shotgun fix 
 
 get '/' do
   'Hello, im enjoying Http!'
@@ -9,8 +10,6 @@ get '/secret' do
 end
 
 get '/cat' do
+  @name = ["Amigo", "Oscar", "Viking"].sample
   erb(:index)
 end
-
-
-set :session_secret, 'super secret'
