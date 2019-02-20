@@ -4,6 +4,18 @@ get '/' do
   'Hello, im enjoying Http!'
 end
 
-get '/Secret' do
+get '/secret' do
   'Tell me a secret'
 end
+
+get '/cat' do
+  "<div>
+  <img src = 'http://bit.ly/1eze8aE'>
+  </div> "
+end
+
+
+
+
+
+set :session_secret, 'super secret'
